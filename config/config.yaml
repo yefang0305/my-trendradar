@@ -77,6 +77,13 @@ platforms:
       name: "抖音"
     - id: "zhihu"
       name: "知乎"
+    - name: "X平台热榜"
+      url: "https://rsshub.app/twitter/trending?region=worldwide"  # 全球热榜，也可以改地区，比如us是美国，jp是日本
+      # 国内可替代的RSS源（如果上面的RSSHub访问不了，用这个）：
+      # url: "https://pipes.yahoo.com/pipes/pipe.run?_id=726e94a284104d38a78980d988273a81&_render=rss"
+      max_articles: 20  # 每次最多抓20条
+      days_to_keep: 1  # 只保留1天内的内容
+      # 如果需要单独设置这个源的关键词匹配规则，可以加下
 
 
 
@@ -417,9 +424,9 @@ ai:
   
   model: "deepseek/deepseek-chat"
 
-  api_key: ""                       # API Key（建议使用环境变量 AI_API_KEY）
+  api_key: "41368084-2970-4b8c-97f7-904e158cb85b"                       # API Key（建议使用环境变量 AI_API_KEY）
   
-  api_base: ""                      # 自定义 API 端点（可选，大多数情况留空）
+  api_base: "https://ark.cn-beijing.volces.com/api/coding/v3"                      # 自定义 API 端点（可选，大多数情况留空）
                                     # 示例: https://api.openai.com/v1（自建代理或兼容接口）
                                     #
                                     # 💡 超级重要：连接任意兼容 OpenAI 协议的模型商
