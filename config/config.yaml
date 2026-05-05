@@ -422,7 +422,7 @@ ai:
   # 完整列表: https://docs.litellm.ai/docs/providers
   # 如果你对于看英文文档比较头疼，那么可以点击页面右下角的 【Ask AI】 ,用中文询问怎么配置 
   
-  model: "ark-code-latest"
+  model: "openai/Doubao-Seed-2.0-pro"
 
   api_key: ${AI_API_KEY}                       # API Key（建议使用环境变量 AI_API_KEY）
   
@@ -475,7 +475,7 @@ ai:
 # 模型配置见上方 ai 配置段
 # ===============================================================
 ai_analysis:
-  enabled: true                     # 是否启用 AI 分析（总开关）
+  enabled: false                     # 是否启用 AI 分析（总开关）
                                     # ⚠️ 开启调度系统后，此项仍为总开关：
                                     #   false → 永远不分析（无论调度怎么设置）
                                     #   true  → 由调度的 analyze 字段控制何时分析
@@ -534,7 +534,7 @@ ai_analysis:
 # 模型配置见上方 ai 配置段
 # ===============================================================
 ai_translation:
-  enabled: true                    # 是否启用翻译功能
+  enabled: false                    # 是否启用翻译功能
 
   # 翻译目标语言
   # 格式：自然语言描述
